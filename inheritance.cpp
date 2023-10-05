@@ -11,7 +11,7 @@ class car{
     public:
     double avg;
     car(){
-        cout<<"0 arg constructor"<<endl;
+        cout<<"0 arg constructor car"<<endl;
     }
     car(string m, double p, double av){
         model=m; 
@@ -23,9 +23,15 @@ class car{
         cout<<"Price - "<<price<<endl;
         cout<<"Average - "<<avg<<endl;
     }
-    //method show to print all the members
+};
+class sportscar: public car{
+    public:
+    string color;
+    sportscar(){
+        cout<<"0 arg constructor sports car"<<endl;
+    }
 };
 int main()
 {
-
+    sportscar sc;
 }
