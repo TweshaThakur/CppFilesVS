@@ -1,33 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class M{
-    protected:
-    int m;
+class A{
     public:
-    void get_m(int);
+    A(){cout<<"constructor of A"<<endl;}
+    ~A(){cout<<"destructor of A"<<endl;}
 };
-class N{
-    protected:
-    int n;
-    public:
-    void get_n(int);
+class B : public A{
+
 };
-class P : public M, public N{
-    public:
-    void display(void);
-};
-void M::get_m(int x){m=x;}
-void N::get_n(int y){n=y;}
-void P:: display(void){
-    cout<<"m = "<<m<<endl;
-    cout<<"n = "<<n<<endl;
-    cout<<"m*n = "<<m*n<<endl;
-}
-int main(){
-    P p;
-    p.get_m(10);
-    p.get_n(20);
-    p.display();
-    return 0;
-}
