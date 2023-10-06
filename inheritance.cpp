@@ -30,8 +30,18 @@ class sportscar: public car{
     sportscar(){
         cout<<"0 arg constructor sports car"<<endl;
     }
+    sportscar(string c){
+        color=c;
+    }
+    void show1(){
+        cout<<model<<endl;
+        cout<<price<<endl;
+        cout<<avg<<endl;
+    }
 };
 int main()
 {
     sportscar sc;
+    sc.show1();
 }
+//wap to create class student with three all modes, 0 arg constructore,show() to print values,create a chidclass EnggStudent, create 0 constructor, create objectof EnggStudent
