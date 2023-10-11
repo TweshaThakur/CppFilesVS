@@ -32,5 +32,6 @@ class B: public A{
 };
 
 int main(){
+    // B obj1; Either default /parameterised constructor can be called
     B obj2(1);
 }
