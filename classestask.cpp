@@ -18,7 +18,20 @@ class staff{
     }
 
 };
-class teacher: public staff{
+class education{
+    private:
+    string qualedu;
+    string profedu;
+    public:
+    void get_data(){
+        cin>>qualedu>>profedu;
+    }
+    void display(){
+        cout<<qualedu<<profedu;
+    }
+
+}
+class teacher: public staff, public education{
     private:
     string subject;
     string publication;
@@ -27,7 +40,7 @@ class teacher: public staff{
         cout<<"teacher created"<<endl;
     }
 };
-class officer: public teacher{
+class officer: public teacher,public education{
     private:
     char grade;
     public:
@@ -61,8 +74,4 @@ int main(){
     casual w;
     cout<<endl;
     regular r;
-}
-class education{
-    public:
-
 }
