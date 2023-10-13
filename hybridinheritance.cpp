@@ -8,6 +8,9 @@ class B{
     void get_dataB(){
         cin>>x;
     }
+    ~B(){
+        cout<<"B destroyed"<<endl;
+    }
 };
 class DB1: public virtual get_dataB{
     protected:
@@ -16,6 +19,9 @@ class DB1: public virtual get_dataB{
     void get_dataDB1(){
         cin>>y;
     }
+    ~DB1(){
+        cout<<"DB1 destroyed"<<endl;
+    }
 };
 class DB2: public virtual get_dataB{
     protected:
@@ -23,6 +29,9 @@ class DB2: public virtual get_dataB{
     public:
     void get_dataDB2(){
         cin>>z;
+    }
+    ~DB2(){
+        cout<<"DB2 destroyed"<<endl;
     }
 };
 // virtual grandparent class in child class to resolve ambiguuity
