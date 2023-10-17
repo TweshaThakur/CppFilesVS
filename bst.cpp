@@ -22,8 +22,30 @@ void inorder(Node *root){
     if (root==NULL) return;
     inorder(root->left);
     cout<<root->data<<" ";
-    inorder(root->right;)
+    inorder(root->right);
+}
+void preorder(Node *root){
+    if (root==NULL) return;
+    cout<<root->data<<" ";
+    inorder(root->left);
+    inorder(root->right);
+}
+void postordder(Node *root){
+    if (root==NULL) return;
+    inorder(root->left);
+    inorder(root->right);
+    cout<<root->data<<" ";
 }
 int main(){
-    
+    Node *root=NULL;
+    root=insertBST(root,5);
+    insertBST(root,1);
+    insertBST(root,3);
+    insertBST(root,4);
+    insertBST(root,2);
+    insertBST(root,7);
+
+    inorder(root);
+    cout<<endl;
+    return 0;
 }
