@@ -2,8 +2,8 @@
 using namespace std;
 
 class BC{
-    public:
-    virtual void show(){
+    public: 
+    virtual void show(){ // virtual for late binding
         cout<<"show() of base class"<<endl;
     }
 };
