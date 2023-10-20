@@ -6,7 +6,7 @@ class A{
     void show(){
         cout<<"A class show()"<<endl;
     }
-    virtual void display(){
+    void display(){
         cout<<"A class display()"<<endl;
     }
 };
