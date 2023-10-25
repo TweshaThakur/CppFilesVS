@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//generic one catch statement should be last in sequence
 void test (int x)
 {
     try
