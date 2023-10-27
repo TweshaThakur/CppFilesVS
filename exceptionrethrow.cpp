@@ -7,8 +7,9 @@ void testMeth(int a, int b){
             throw 'a';
         }
     }
-    catch(int e) {
+    catch(char e) {
         cout<<"caught in function catch "<<e<<endl;
+        throw e;
     }
 };
 int main(){
