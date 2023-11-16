@@ -2,7 +2,9 @@
 #include <cmath>
 #include <stdexcept>
 
-class PrimeNumberException : public std::exception {
+using namespace std;
+
+class PrimeNumberException : public exception {
 public:
     const char* what() const noexcept override {
         return "PrimeNumberException: Entered number is prime!";
@@ -25,25 +27,25 @@ bool isPrime(int n) {
 
 int main() {
     try {
-        std::cout << "Enter a number between 1 and 100: ";
+        cout << "Enter a number between 1 and 100: ";
         int number;
-        std::cin >> number;
+        cin >> number;
 
         if (number < 1 || number > 100) {
-            throw std::out_of_range("Number out of range (1-100).");
+            throw out_of_range("Number out of range (1-100).");
         }
 
         if (isPrime(number)) {
             throw PrimeNumberException();
         }
 
-        std::cout << "Number is not prime.\n";
-    } catch (const std::out_of_range& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        cout << "Number is not prime.\n";
+    } catch (const out_of_range& e) {
+        cerr << "Error: " << e.what() <<endl;
     } catch (const PrimeNumberException& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        cerr << "Error: " << e.what() << endl;
+    } catch (const exception& e) {
+        cerr << "Error: " << e.what() <<endl;
     }
 
     return 0;
